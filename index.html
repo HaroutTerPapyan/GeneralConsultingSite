@@ -153,6 +153,24 @@ a{color:var(--primary)}
 .also{margin-top:26px;color:var(--ink-soft);font-size:.95rem}
 .also strong{color:var(--ink)}
 
+
+/* real estate */
+.re-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media (max-width:860px){.re-grid{grid-template-columns:1fr}}
+.re-col{background:var(--ground);border:1px solid var(--line);border-radius:14px;padding:26px;display:flex;flex-direction:column;gap:22px}
+.re-head{display:flex;align-items:center;gap:12px}
+.re-col .eyebrow{display:block;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.re-col .chips span{font:500 .84rem/1.2 var(--body);padding:7px 11px;border-radius:999px;background:var(--surface);border:1px solid var(--line-strong);color:var(--ink)}
+.re-both{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:22px}
+@media (max-width:860px){.re-both{grid-template-columns:1fr}}
+.re-both > div{padding:24px;border-radius:14px}
+.re-both > div:first-child{border:1px solid var(--line);background:var(--ground)}
+.re-both .eyebrow{display:block;margin-bottom:12px}
+.re-compliance{background:var(--primary-soft)}
+.re-compliance p{color:var(--ink-soft);font-size:.95rem}
+.section:not(.alt) .re-col,.section:not(.alt) .re-both > div:first-child{background:var(--surface)}
+
 /* process */
 .steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s;position:relative}
 @media (max-width:920px){.steps{grid-template-columns:1fr 1fr;row-gap:30px}}
@@ -240,6 +258,7 @@ a{color:var(--primary)}
     <nav class="nav" id="nav">
       <a href="#services">Services</a>
       <a href="#industries">Who we help</a>
+      <a href="#real-estate">Real estate</a>
       <a href="#process">How it works</a>
       <a href="#about">About</a>
       <a href="#contact" class="btn btn-primary">Get in touch</a>
@@ -254,7 +273,7 @@ a{color:var(--primary)}
     <div>
       <span class="eyebrow">Los Angeles &amp; Santa Clarita Valley</span>
       <h1 style="margin-top:16px">Less paperwork. Better tools. A business that <span class="hl">runs smoother</span>.</h1>
-      <p class="lede">Project-based technology work for law firms, restaurants, and local businesses: websites, automation, digital forms, Microsoft 365 solutions, and a clear plan for what to use next.</p>
+      <p class="lede">Project-based technology work for law firms, realtors and loan officers, restaurants, and local businesses: websites, automation, digital forms, Microsoft 365 solutions, and a clear plan for what to use next.</p>
       <div class="hero-actions">
         <a href="#contact" class="btn btn-primary">Book a free consultation &rarr;</a>
         <a href="#services" class="btn">See what we build</a>
@@ -275,7 +294,7 @@ a{color:var(--primary)}
         <li class="q"><span class="q-title">Paper client intake becomes an online form</span><span class="q-meta">Law office &middot; Microsoft Forms + SharePoint</span><span class="pill ok">Delivered</span></li>
         <li class="q"><span class="q-title">New website with menu, hours, and catering requests</span><span class="q-meta">Restaurant &middot; website build</span><span class="pill prog">In build</span></li>
         <li class="q"><span class="q-title">Invoice approvals routed automatically</span><span class="q-meta">Professional office &middot; Power Automate</span><span class="pill ok">Delivered</span></li>
-        <li class="q"><span class="q-title">Choosing a scheduling and booking system</span><span class="q-meta">Salon &middot; software selection</span><span class="pill sched">Planning</span></li>
+        <li class="q"><span class="q-title">Five loan-program landing pages with CRM routing</span><span class="q-meta">Loan officer &middot; landing pages</span><span class="pill sched">Planning</span></li>
         <li class="q"><span class="q-title">Daily prep and inventory checklists go digital</span><span class="q-meta">Restaurant &middot; Power Apps</span><span class="pill prog">In build</span></li>
       </ul>
       <div class="queue-foot">Illustrative examples of the kinds of projects we take on.</div>
@@ -414,7 +433,7 @@ a{color:var(--primary)}
     </div>
 
     <div class="ind" role="tabpanel" id="panel-office" aria-labelledby="tab-office" hidden>
-      <p class="ind-intro">Accountants, real estate and mortgage offices, agencies, and consultants: small teams moving a lot of client information around.</p>
+      <p class="ind-intro">Accountants, insurance offices, agencies, and consultants: small teams moving a lot of client information around.</p>
       <div class="ind-col problems"><h3><span class="dot"></span>What we usually find</h3>
         <ul class="plain">
           <li>Paper forms and email chains doing the job of a workflow</li>
@@ -453,8 +472,83 @@ a{color:var(--primary)}
   </div>
 </section>
 
+<!-- ============ REAL ESTATE & MORTGAGE ============ -->
+<section class="section alt" id="real-estate">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Realtors &amp; loan officers</span>
+      <h2>Your brokerage gives you a website. We build what it can't.</h2>
+      <p class="lede">Focused landing pages for each service you offer, plus the automation behind them, so every ad, QR code, and social post lands on the right offer and every lead gets a fast follow-up.</p>
+    </div>
+
+    <div class="re-grid">
+      <article class="re-col">
+        <div class="re-head">
+          <span class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></span>
+          <h3>For realtors</h3>
+        </div>
+        <div>
+          <span class="eyebrow">Landing pages by service line</span>
+          <div class="chips">
+            <span>Buyers</span><span>First-time buyers</span><span>Relocation</span><span>Home valuation</span><span>Sellers &amp; listing guide</span><span>Downsizing</span><span>Investors &amp; 1031</span><span>Probate &amp; trust sales</span><span>New construction</span><span>Luxury</span><span>Neighborhood guides</span><span>Single-property sites</span><span>Open house pages</span>
+          </div>
+        </div>
+        <div>
+          <span class="eyebrow">Tools &amp; automation</span>
+          <ul class="ticks">
+            <li>Leads from your pages, Zillow, and Realtor.com routed into your CRM with an instant first reply</li>
+            <li>Tablet or QR open-house sign-in that feeds your CRM</li>
+            <li>Escrow checklists with deadline reminders</li>
+            <li>Past-client touchpoints: home anniversaries, value updates, referral asks</li>
+            <li>Listing marketing kit: flyer, social, and email templates</li>
+            <li>Team dashboards for lead sources, conversions, and pipeline</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="re-col">
+        <div class="re-head">
+          <span class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h2M12 11h2M16 11h0M8 15h2M12 15h2M8 18h8"/></svg></span>
+          <h3>For loan officers</h3>
+        </div>
+        <div>
+          <span class="eyebrow">Landing pages by loan program</span>
+          <div class="chips">
+            <span>Purchase &amp; pre-approval</span><span>Refinance &amp; cash-out</span><span>HELOC</span><span>First-time buyers &amp; down payment help</span><span>FHA</span><span>VA</span><span>Jumbo</span><span>Self-employed / bank statement</span><span>Investor / DSCR</span><span>Reverse mortgage</span><span>Renovation</span><span>Realtor partner page</span>
+          </div>
+        </div>
+        <div>
+          <span class="eyebrow">Tools &amp; automation</span>
+          <ul class="ticks">
+            <li>Inquiry forms that route into your CRM with a quick automatic reply</li>
+            <li>Milestone updates by text or email to borrowers and their agent</li>
+            <li>Pipeline dashboard fed from your loan origination system</li>
+            <li>Refinance alerts for past clients when rates move</li>
+            <li>Data security program aligned with the FTC Safeguards Rule</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+
+    <div class="re-both">
+      <div>
+        <span class="eyebrow">For agent &amp; lender partners</span>
+        <ul class="ticks">
+          <li>A shared deal status page for agent, lender, and client</li>
+          <li>Co-branded pages for joint events like first-time buyer seminars</li>
+          <li>AI-assisted drafts of listing descriptions, follow-ups, and posts, always reviewed by a person</li>
+        </ul>
+      </div>
+      <div class="re-compliance">
+        <span class="eyebrow">Built with your compliance rules in mind</span>
+        <p>Pages are built to include DRE license and responsible broker details, NMLS IDs, and Equal Housing Opportunity statements, and to avoid rate claims that trigger extra disclosures. We plan time for your brokerage's marketing approval.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ PROCESS ============ -->
-<section class="section alt" id="process">
+<section class="section" id="process">
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">How it works</span>
@@ -470,7 +564,7 @@ a{color:var(--primary)}
 </section>
 
 <!-- ============ ENGAGEMENT ============ -->
-<section class="section" id="engage">
+<section class="section alt" id="engage">
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">Ways to work together</span>
@@ -501,7 +595,7 @@ a{color:var(--primary)}
 </section>
 
 <!-- ============ ABOUT ============ -->
-<section class="section alt" id="about">
+<section class="section" id="about">
   <div class="wrap about">
     <div>
       <span class="eyebrow">About</span>
@@ -527,7 +621,7 @@ a{color:var(--primary)}
 </section>
 
 <!-- ============ FAQ ============ -->
-<section class="section" id="faq">
+<section class="section alt" id="faq">
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">Questions</span>
@@ -543,7 +637,7 @@ a{color:var(--primary)}
 </section>
 
 <!-- ============ CONTACT ============ -->
-<section class="section alt" id="contact">
+<section class="section" id="contact">
   <div class="wrap contact-grid">
     <div>
       <span class="eyebrow">Get in touch</span>
@@ -564,7 +658,7 @@ a{color:var(--primary)}
           <div class="field"><label for="f-phone">Phone <span style="font-weight:400;color:var(--ink-faint)">(optional)</span></label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
           <div class="field"><label for="f-type">Type of business</label>
             <select id="f-type" name="type">
-              <option>Law firm</option><option>Restaurant or food business</option><option>Professional office</option><option>Retail or local shop</option><option>Other</option>
+              <option>Law firm</option><option>Realtor or real estate team</option><option>Loan officer or mortgage team</option><option>Restaurant or food business</option><option>Professional office</option><option>Retail or local shop</option><option>Other</option>
             </select></div>
           <div class="field"><label for="f-size">Team size</label>
             <select id="f-size" name="size">
@@ -572,7 +666,7 @@ a{color:var(--primary)}
             </select></div>
           <div class="field full"><label for="f-need">What are you interested in?</label>
             <select id="f-need" name="need">
-              <option>Website</option><option>Automating a workflow</option><option>Digitizing paper forms or files</option><option>Microsoft 365 / Power Platform solution</option><option>Choosing new software</option><option>Tech or operations planning</option><option>Not sure yet</option>
+              <option>Website</option><option>Landing pages for my services</option><option>Automating a workflow</option><option>Digitizing paper forms or files</option><option>Microsoft 365 / Power Platform solution</option><option>Choosing new software</option><option>Tech or operations planning</option><option>Not sure yet</option>
             </select></div>
           <div class="field full"><label for="f-msg">Tell us a bit more</label><textarea id="f-msg" name="message" required placeholder="What process or project you have in mind, the tools you use today, any deadlines..."></textarea></div>
         </div>
@@ -590,7 +684,7 @@ a{color:var(--primary)}
 <footer class="footer">
   <div class="wrap">
     <span>&copy; 2026 Firm Name &middot; Websites, automation &amp; tech planning for local business &middot; Los Angeles &amp; Santa Clarita, CA</span>
-    <span><a href="#services">Services</a> &middot; <a href="#industries">Who we help</a> &middot; <a href="#contact">Contact</a></span>
+    <span><a href="#services">Services</a> &middot; <a href="#industries">Who we help</a> &middot; <a href="#real-estate">Real estate</a> &middot; <a href="#contact">Contact</a></span>
   </div>
 </footer>
 
